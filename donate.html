@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+  <meta name="renderer" content="webkit" />
+  <meta name="force-rendering" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/css/mdui.min.css"
+    integrity="sha384-2PJ2u4NYg6jCNNpv3i1hK9AoAqODy6CdiC+gYiL2DVx+ku5wzJMFNdE3RoWfBIRP" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./background.css" />
+  <link rel="icon" href="//cdn.jsdelivr.net/gh/JupiterJun/picture/hzgeek.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="//cdn.jsdelivr.net/gh/JupiterJun/picture/hzgeek.ico" type="image/x-icon" />
+  <style>
+    html {
+      min-height: 100%;
+    }
+
+    .main {
+      flex: 1 0 auto;
+    }
+  </style>
+  <title>体温打卡-收银台</title>
+</head>
+
+<body class="mdui-theme-primary-orange mdui-theme-accent-red mdui-theme-layout-auto mdui-loaded">
+  <header class="mdui-appbar">
+    <div class="mdui-toolbar mdui-color-theme">
+      <a href="https://www.hzgeek.top/" target="_blank" class="mdui-typo-headline">衡中极客圈</a>
+      <a href="javascript:;" class="mdui-typo-title">鑫考云体温打卡</a>
+    </div>
+  </header>
+
+  <div class="mdui-container mdui-typo main">
+    <div class="mdui-row mdui-valign">
+      <div class="mdui-card mdui-col-xs-12 mdui-col-md-10 mdui-col-offset-md-1 mdui-m-y-3 mdui-hoverable">
+        <!-- 卡片的标题和副标题 -->
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-title" id='title'>收银台</div>
+          <div class="mdui-card-primary-subtitle" id='subtitle'></div>
+        </div>
+        <!-- 卡片的内容 -->
+        <div class="mdui-card-content">
+          <ul>
+            <li>这么好的服务总不能让我们用爱发电吧，况且租用服务器是有成本开销的~</li>
+            <li>所收款项将全部用于衡中极客圈租用服务器、购买域名等云服务开销。</li>
+            <li>请在付款时备注您希望我们显示在鸣谢页面上的昵称。</li>
+            <li><strong>HZ-Geek Warning：白嫖的会被臭死，看着给点就行</strong></li>
+            <li class="mdui-hidden-md-up">点击<strong>页面底端</strong>的“已付款，进入下一步”来填写信息。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="mdui-row">
+      <div class="mdui-card mdui-col-xs-12 mdui-col-md-4 mdui-col-offset-md-1 mdui-m-y-2 mdui-hoverable">
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-title">微信支付</div>
+          <div class="mdui-card-primary-subtitle">微信扫码付款给衡中极客圈</div>
+        </div>
+        <div class="mdui-card-content">
+          <img src="./skm/wx.jpg" class="mdui-img-fluid "
+            onclick="window.open('wxp:\/\/f2f0J_RPixjp4yKtEAsnM7en7bOvZTROQhT-');" />
+        </div>
+      </div>
+      <div class="mdui-col-md-2 mdui-m-t-5 mdui-p-x-1 mdui-text-center mdui-hidden-sm-down">
+        <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-hoverable"
+          onclick="document.location.href='./main.html'">已付款，进入下一步</button><br>
+        <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-hoverable mdui-m-t-1"
+          mdui-dialog="{target: '#baipiao'}">未付款，直接下一步</button>
+      </div>
+      <div class="mdui-card mdui-col-xs-12 mdui-col-md-4  mdui-m-y-2 mdui-hoverable">
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-title">支付宝</div>
+          <div class="mdui-card-primary-subtitle">支付宝扫描或点击二维码付款给衡中极客圈</div>
+        </div>
+        <div class="mdui-card-content">
+          <img src="//cdn.jsdelivr.net/gh/JupiterJun/cdn/XKTemperature/skm/ali.jpg" class="mdui-img-fluid "
+            onclick="window.open('https:\/\/qr.alipay.com/fkx13668iplkfkhm8zrvbd5');" />
+        </div>
+      </div>
+    </div>
+    <div class="mdui-row mdui-hidden-md-up">
+      <div class="mdui-col-xs-12 mdui-m-y-2 mdui-text-center">
+        <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-hoverable"
+          onclick="document.location.href='./main.html'">已付款，进入下一步</button><br>
+        <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-hoverable mdui-m-t-1"
+          mdui-dialog="{target: '#baipiao'}">未付款，直接下一步</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mdui-dialog" id='baipiao'>
+    <div class="mdui-dialog-title">你真的要白嫖吗</div>
+    <div class="mdui-dialog-content">就算白嫖也别这么明目张胆吧！（假装自己已经付款的样子）</div>
+    <div class="mdui-dialog-actions">
+      <button class="mdui-btn mdui-ripple" onclick="baipiao()">我就是要白嫖</button>
+      <button class="mdui-btn mdui-ripple" mdui-dialog-close>我再想想</button>
+    </div>
+  </div>
+
+
+  <footer class="mdui-color-white">
+    <div class="mdui-container mdui-typo">
+      <div class="mdui-row">
+        <div class="mdui-col-xs-6 mdui-col-md-2 mdui-col-offset-md-5 mdui-col-offset-xs-3 mdui-m-y-2 mdui-text-center">
+          <img src="//cdn.jsdelivr.net/gh/JupiterJun/cdn/hzgeekJoinUs/logo.webp" class="mdui-img-fluid "
+            onclick="window.open('https:\/\/www.hzgeek.top');" />
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/js/mdui.min.js"
+    integrity="sha384-aB8rnkAu/GBsQ1q6dwTySnlrrbhqDwrDnpVHR2Wgm8pWLbwUnzDcIROX3VvCbaK+"
+    crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/gh/JupiterJun/cdn/XKTemperature/donate.min.js"></script>
+
+</body>
+
+</html>
